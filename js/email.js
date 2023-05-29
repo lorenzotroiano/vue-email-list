@@ -5,25 +5,17 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
-        email1: "",
-        email2: "",
-        email3: "",
-        email4: "",
-        email5: "",
-        email6: "",
-        email7: "",
-        email8: "",
-        email9: "",
-        email10: "",
+        arrayEmail: [],
     }
   },
+  
   mounted () {
     axios
       .get('https://flynn.boolean.careers/exercises/api/random/mail')
       .then
         (risposta => {
             console.log(risposta.data.response);
-            this.email1 = risposta.data.response;
+            this.arrayEmail.push(risposta.data.response);
         }),
 
         axios
@@ -31,7 +23,7 @@ createApp({
       .then
         (risposta => {
             console.log(risposta.data.response);
-            this.email2 = risposta.data.response;
+            this.arrayEmail.push(risposta.data.response);
         }),
 
         axios
@@ -39,7 +31,7 @@ createApp({
       .then
         (risposta => {
             console.log(risposta.data.response);
-            this.email3 = risposta.data.response;
+            this.arrayEmail.push(risposta.data.response);
         }),
 
         axios
@@ -47,7 +39,7 @@ createApp({
       .then
         (risposta => {
             console.log(risposta.data.response);
-            this.email4 = risposta.data.response;
+            this.arrayEmail.push(risposta.data.response);
         }),
 
         axios
@@ -55,7 +47,7 @@ createApp({
       .then
         (risposta => {
             console.log(risposta.data.response);
-            this.email5 = risposta.data.response;
+            this.arrayEmail.push(risposta.data.response);
         }),
 
         axios
@@ -63,7 +55,7 @@ createApp({
       .then
         (risposta => {
             console.log(risposta.data.response);
-            this.email6 = risposta.data.response;
+            this.arrayEmail.push(risposta.data.response);
         }),
 
         axios
@@ -71,7 +63,7 @@ createApp({
       .then
         (risposta => {
             console.log(risposta.data.response);
-            this.email7 = risposta.data.response;
+            this.arrayEmail.push(risposta.data.response);
         }),
 
         axios
@@ -79,7 +71,7 @@ createApp({
       .then
         (risposta => {
             console.log(risposta.data.response);
-            this.email8 = risposta.data.response;
+            this.arrayEmail.push(risposta.data.response);
         }),
 
         axios
@@ -87,7 +79,7 @@ createApp({
       .then
         (risposta => {
             console.log(risposta.data.response);
-            this.email9 = risposta.data.response;
+            this.arrayEmail.push(risposta.data.response);
         }),
 
         axios
@@ -95,7 +87,7 @@ createApp({
       .then
         (risposta => {
             console.log(risposta.data.response);
-            this.email10 = risposta.data.response;
+            this.arrayEmail.push(risposta.data.response);
         })
   }
 }).mount('#app')
