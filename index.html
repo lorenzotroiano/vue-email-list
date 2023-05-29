@@ -12,7 +12,7 @@
 <di id="app">
 
     <ul>
-        <li v-for="email in arrayEmail" >{{email}}</li>
+        <li v-for="(email, index) in arrayEmail" v-if="arrayEmail.length === 10">{{email}}</li>
        
     </ul>
 </di>
